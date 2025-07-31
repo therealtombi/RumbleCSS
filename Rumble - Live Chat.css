@@ -1,0 +1,70 @@
+/* Rumble - Live Chat */
+
+/* 🔧 Make background fully transparent */
+html, body {
+  background: transparent !important;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif !important;
+}
+
+/* 1️⃣ Style Username */
+.text-light.font-bold.text-title {
+  color: #00ffcc !important;
+  font-size: 18px !important;
+  text-shadow: 0 0 4px #00ffcc;
+}
+
+/* 2️⃣ Style Message Content */
+.text-light.break-words.break-all.whitespace-pre-wrap.text-title {
+  color: white !important;
+  font-size: 18px !important;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 4px 8px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+/* 3️⃣ Highlight Donations (Rants) */
+[data-sentry-component="CIChatRowDonation"] {
+  background-color: #ff9900 !important;
+  color: #000 !important;
+  font-size: 16px !important;
+  padding: 2px 6px;
+  border-radius: 12px;
+  box-shadow: 0 0 6px #ff9900;
+}
+
+/* 4️⃣ Gifted Membership Highlighting */
+/* These are messages that have a username but NO .text-title message span */
+[data-index] .text-light.font-bold.text-title:not(:has(~ .text-light.break-words))::after {
+  content: " 🎁 Gifted Memberships Detected!";
+  color: gold;
+  font-weight: bold;
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+/* 5️⃣ Optional: Add glow or pulse to gifted messages */
+[data-index] .text-light.font-bold.text-title:not(:has(~ .text-light.break-words)) {
+  animation: pulseGift 2s infinite;
+  color: gold !important;
+}
+
+@keyframes pulseGift {
+  0% { text-shadow: 0 0 4px gold; }
+  50% { text-shadow: 0 0 12px gold; }
+  100% { text-shadow: 0 0 4px gold; }
+}
+
+img[alt="RUMBLE"] {
+  width: 24px !important;
+  height: 24px !important;
+  animation: spin 3s linear infinite;
+  transform-origin: center;
+}
+@keyframes spin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

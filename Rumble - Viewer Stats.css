@@ -1,0 +1,143 @@
+/* Rumble - Viewer Stats */
+
+/* 🔧 Transparent background */
+html, body {
+  background: transparent !important;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* ===============================
+   🎯 1a. Style and Animate the RUMBLE Image - ROTATION
+   =============================== */
+
+/*img[alt="RUMBLE"] {
+  width: 40px !important;
+  height: 40px !important;
+  margin-right: 10px;
+  --border-radius: 50%;
+  filter: drop-shadow(0 0 6px lime);*/
+
+  /* Uncomment one of the following animation options: */
+
+  /* 🚀 Continuous Spin */
+  /*animation: spin 5s linear infinite;*/
+
+  /* 🎲 Flip horizontally */
+  /* transform: scaleX(-1); */
+
+  /* 🔁 Flip vertically */
+  /* transform: scaleY(-1); */
+
+  /* 💫 Bounce on load */
+  /* animation: bounceIn 1s ease-in-out; */
+/*}*/
+
+/* ===============================
+   🎯 1b. Style and Animate the RUMBLE Image - SPIN
+   =============================== */
+
+img[alt="RUMBLE"] {
+  width: 40px !important;
+  height: 40px !important;
+  animation: spinY 2s linear infinite;
+  transform-style: preserve-3d;
+  position: relative;
+  display: block;
+}
+
+/* Fake backside using ::after */
+img[alt="RUMBLE"]::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  background-image: url('https://rumble.com/i/favicon-v4.png'); /* same image */
+  background-size: cover;
+  transform: rotateY(180deg);
+  backface-visibility: visible;
+}
+
+  /* Uncomment one of the following animation options: */
+
+  /* 🚀 Continuous Spin */
+  /*animation: spin 5s linear infinite;*/
+
+  /* 🎲 Flip horizontally */
+  /* transform: scaleX(-1); */
+
+  /* 🔁 Flip vertically */
+  /* transform: scaleY(-1); */
+
+  /* 💫 Bounce on load */
+  /* animation: bounceIn 1s ease-in-out; */
+/*}*/
+
+/* Keyframe for rotation */
+@keyframes spin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Keyframe for bounce */
+@keyframes bounceIn {
+  0%   { transform: scale(0.2); opacity: 0; }
+  60%  { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+/* Keyframe for spin on X */
+@keyframes spinX {
+  from { transform: rotateX(0deg); }
+  to   { transform: rotateX(360deg); }
+}
+
+/* Keyframe for spin on Y */
+@keyframes spinY {
+  from { transform: rotateY(0deg); }
+  to   { transform: rotateY(360deg); }
+}
+
+/* ===============================
+   👁️‍🗨️ 2. Style the Viewer Count
+   =============================== */
+
+.text-sky.text-subtitle.font-bold {
+  font-size: 26px !important;
+  font-weight: 900 !important;
+  font-family: 'Orbitron', sans-serif !important;
+  color: #00ffff !important;
+  text-shadow: 0 0 6px #00ffff;
+
+  /* Optional: Pulse Animation */
+   animation: pulse 2s ease-in-out infinite;
+
+  /* Optional: Slide in from left */
+  /* animation: slideIn 1s ease-out; */
+}
+
+/* Keyframe for pulse */
+@keyframes pulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+/* Keyframe for slide-in */
+@keyframes slideIn {
+  0%   { transform: translateX(-100%); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+/* ===============================
+   🖼️ Optional: Center Everything
+   =============================== */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
