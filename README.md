@@ -32,16 +32,9 @@ This package includes styles for:
 
 1. In Rumble Studio:
    - Go to your **Chat Widget**, **Viewer Widget**, or **Pinned Comment Widget**
-   - Click **Customize** or **Edit CSS**
+   - Copy the URL
 
-2. Paste the contents of the relevant CSS file:
-   - `chat.css` → Chat widget
-   - `stats.css` → Viewer stats widget
-   - `pinned.css` → Pinned comment widget
-
-3. Save changes.
-
-4. In OBS:
+2. In OBS:
    - Add a **Browser Source**
    - Use the Rumble Studio Widget URL
    - Set a custom resolution (e.g. 400x800 for chat)
