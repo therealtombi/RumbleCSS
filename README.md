@@ -46,7 +46,7 @@ This package includes styles for:
    - Add a **Browser Source**
    - Use the Rumble Studio Widget URL
    - Set a custom resolution (e.g. 400x800 for chat)
-   - Make sure **"Custom CSS"** is unchecked (you’re styling via the Rumble widget)
+   - Make sure **"Custom CSS"** is checked (you’re styling via the Rumble widget)
 
 ---
 
