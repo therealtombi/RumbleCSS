@@ -15,7 +15,6 @@ This package includes styles for:
 - Transparent background support for OBS
 - Responsive scaling for different screen sizes
 - Custom fonts, colors, and layout tweaks
-- Easy to apply in Rumble Studio embed settings
 
 ---
 
